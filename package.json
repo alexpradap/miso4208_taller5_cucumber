@@ -1,0 +1,22 @@
+{
+  "name": "miso4208_taller5_cucumber",
+  "version": "1.0.0",
+  "description": "Taller 5 - Ejercicios con cucumber",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexpradap/miso4208_taller5_cucumber.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alexpradap/miso4208_taller5_cucumber/issues"
+  },
+  "homepage": "https://github.com/alexpradap/miso4208_taller5_cucumber#readme",
+  "dependencies": {
+    "cucumber": "^6.0.5"
+  }
+}
