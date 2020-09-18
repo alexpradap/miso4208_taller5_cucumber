@@ -36,3 +36,21 @@ When('I try to login', () => {
 Then('I expect to not be able to login', () => {
   $('.aviso.alert.alert-danger').waitForDisplayed(5000);
 });
+
+When(/^I fill with (.*) and (.*)$/ , (email, password) => {
+  var cajaLogIn = $('.cajaLogIn');
+
+ var mailInput = cajaLogIn.$('input[name="correo"]');
+ mailInput.click();
+ mailInput.keys(email);
+
+ var passwordInput = cajaLogIn.$('input[name="password"]');
+ passwordInput.click();
+ passwordInput.keys(password)
+});
+
+Then('I expect to see {string}', error => {
+ $('.aviso.alert.alert-danger').waitForDisplayed(5000);
+ var alertText = browser.$('.aviso.alert.alert-danger').getText();
+ expect(alertText).to.include(error);
+});
