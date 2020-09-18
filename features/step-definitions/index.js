@@ -54,3 +54,7 @@ Then('I expect to see {string}', error => {
  var alertText = browser.$('.aviso.alert.alert-danger').getText();
  expect(alertText).to.include(error);
 });
+
+Then('I expect to see fa-user-circle', () => {
+  $('.jsx-4152177179.usrImage.fa.fa-user-circle.fa-2x').waitForDisplayed(5000);
+})
