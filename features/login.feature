@@ -10,9 +10,9 @@ Scenario Outline: Login failed with wrong inputs
     Then I expect to see <error>
 
     Examples:
-      | email            | password | error                    |
-      |                  |          | "Ingresa una contraseña"   |
-      | miso@gmail.com   |    1234  | "Upss! El correo y"      |
+      |email         |password|error                                         |
+      |              |        |Ingresa una contraseña                        |
+      |miso@gmail.com|1234    |Upss! El correo y la contraseña que ingresaste|
 
 Scenario: Login successful
 
@@ -20,4 +20,4 @@ Scenario: Login successful
         When I open the login screen
         And I fill with pruebasautomaticas@yopmail.com and miso4208Te$t
         And I try to login
-        Then I expect to see fa-user-circle
+        Then I should see fa-user-circle
